@@ -46,6 +46,7 @@
             // 
             // Output
             // 
+            this.Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Output.Location = new System.Drawing.Point(12, 301);
             this.Output.Multiline = true;
             this.Output.Name = "Output";

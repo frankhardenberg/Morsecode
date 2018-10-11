@@ -67,6 +67,7 @@ namespace MorseCode
             {'@', ". _ _ . _ ."},
             {'&', ". _ . . ."}
         };
+        string MorseResult;
 
         public ConvertToMorse()
         {
@@ -81,13 +82,28 @@ namespace MorseCode
         private void ConvertText_Click(object sender, EventArgs e)
         {
             InputString = Input.Text;
+            InputString = InputString.ToUpper();
             char[] UserInput = InputString.ToCharArray();
 
-
-            foreach (char User in UserInput)
+            foreach (char Character in UserInput)
             {
-                TextInput.Add(User);
+                MorseResult += ConvToMorse(Character);               
             }
+
+            Output.Text = MorseResult;
+        }
+
+        private string ConvToMorse(char X)
+        {
+            if (ToMorse.ContainsKey(X))
+            {
+                return ToMorse[X];                
+            }
+
+            else
+            {
+                return "";
+            }             
         }
 
         private void Output_TextChanged(object sender, EventArgs e)
