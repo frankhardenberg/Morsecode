@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ConvertToMorse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ConvertToMorse.Designer.cs">
+      <DependentUpon>ConvertToMorse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertToText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvertToText.Designer.cs">
+      <DependentUpon>ConvertToText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Morsecode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Morsecode.Designer.cs">
+      <DependentUpon>Morsecode.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConvertToMorse.resx">
+      <DependentUpon>ConvertToMorse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConvertToText.resx">
+      <DependentUpon>ConvertToText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Morsecode.resx">
+      <DependentUpon>Morsecode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
