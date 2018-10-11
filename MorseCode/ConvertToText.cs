@@ -12,11 +12,6 @@ namespace MorseCode
 {
     public partial class ConvertToText : Form
     {
-        public ConvertToText()
-        {
-            InitializeComponent();
-        }
-
         static Dictionary<char, string> ToMorse = new Dictionary<char, string>()
         {
             {'A', ". _"},
@@ -63,7 +58,6 @@ namespace MorseCode
             {'/', "_ . . _ ."},
             {':', "_ _ _ . . ."},
             {'\'', ". _ _ _ _ ."},
-            {'-', "_ . . . . _"},
             {'}', "_ . _ _ . _"},
             {';', "_ . _ . _"},
             {'{', "_ . _ _ ."},
@@ -72,6 +66,11 @@ namespace MorseCode
             {'&', ". _ . . ."}
         };
         Dictionary<string, Char> text = ToMorse.ToDictionary(e => e.Value, e => e.Key);
+
+        public ConvertToText()
+        {
+            InitializeComponent();
+        }        
 
         private void Input_TextChanged(object sender, EventArgs e)
         {

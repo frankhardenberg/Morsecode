@@ -15,20 +15,20 @@ namespace MorseCode
         public Morsecode()
         {
             InitializeComponent();
-        }
+        }        
 
         private void ConvertToMorse_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ConvertToMorse Form = new ConvertToMorse();
-            Form.ShowDialog();
+            ConvertToMorse Morse = new ConvertToMorse();
+            Morse.ShowDialog();
         }
 
         private void ConvertToText_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ConvertToText Form = new ConvertToText();
-            Form.ShowDialog();
+            ConvertToText Text = new ConvertToText();            
+            Text.ShowDialog();            
         }
 
         private void Morsecode_FormClosing(object sender, FormClosingEventArgs e)
