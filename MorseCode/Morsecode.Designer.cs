@@ -64,6 +64,7 @@
             this.MaximizeBox = false;
             this.Name = "Morsecode";
             this.Text = "Morsecode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Morsecode_FormClosing);
             this.ResumeLayout(false);
 
         }

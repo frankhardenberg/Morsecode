@@ -30,5 +30,10 @@ namespace MorseCode
             ConvertToText Form = new ConvertToText();
             Form.ShowDialog();
         }
+
+        private void Morsecode_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
