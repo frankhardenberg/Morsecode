@@ -116,5 +116,14 @@ namespace MorseCode
         {
             Application.Exit();
         }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            Input.Text = string.Empty;
+            Output.Text = string.Empty;
+            InputString = string.Empty;
+            TextResult = string.Empty;
+            ConvertText.Enabled = true;
+        }
     }
 }

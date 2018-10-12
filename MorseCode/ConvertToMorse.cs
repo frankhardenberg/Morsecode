@@ -91,6 +91,7 @@ namespace MorseCode
             }
 
             Output.Text = MorseResult;
+            ConvertText.Enabled = false;
         }
 
         private string ConvToMorse(char X)
@@ -114,6 +115,15 @@ namespace MorseCode
         private void ConvertToMorse_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            Input.Text = string.Empty;
+            Output.Text = string.Empty;
+            InputString = string.Empty;
+            MorseResult = string.Empty;
+            ConvertText.Enabled = true;
         }
     }
 }

@@ -31,6 +31,7 @@
             this.Input = new System.Windows.Forms.TextBox();
             this.Output = new System.Windows.Forms.TextBox();
             this.ConvertText = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Input
@@ -64,11 +65,23 @@
             this.ConvertText.UseVisualStyleBackColor = true;
             this.ConvertText.Click += new System.EventHandler(this.ConvertText_Click);
             // 
+            // Reset
+            // 
+            this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset.Location = new System.Drawing.Point(795, 13);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(197, 425);
+            this.Reset.TabIndex = 3;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // ConvertToText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1004, 451);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.ConvertText);
             this.Controls.Add(this.Output);
             this.Controls.Add(this.Input);
@@ -86,5 +99,6 @@
         private System.Windows.Forms.TextBox Input;
         private System.Windows.Forms.TextBox Output;
         private System.Windows.Forms.Button ConvertText;
+        private System.Windows.Forms.Button Reset;
     }
 }
