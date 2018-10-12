@@ -16,70 +16,70 @@ namespace MorseCode
         List<char> MorseInput = new List<char>();
         static Dictionary<string, char> ToMorse = new Dictionary<string, char>()
         {
-            {". _", 'A'},
-            {"_ . . .", 'B'},
-            {"_ . _ .", 'C'},
-            {"_ . .", 'D'},
-            {".", 'E'},
-            {". . _ .", 'F'},
-            {"_ _ .", 'G'},
-            {". . . .", 'H'},
-            {". .", 'I'},
-            {". _ _ _", 'J'},
-            {"_ . _", 'K'},
-            {". _ . .", 'L'},
-            {"_ _", 'M'},
-            {"_ .", 'N'},
-            {"_ _ _", 'O'},
-            {". _ _ .", 'P'},
-            {"_ _ . _", 'Q'},
-            {". _ .", 'R'},
-            {". . .", 'S'},
-            {"_", 'T'},
-            {". . _", 'U'},
-            {". . . _", 'V'},
-            {". _ _", 'W'},
-            {"_ . . _", 'X'},
-            {"_ . _ _", 'Y'},
-            {"_ _ . .", 'Z'},
-            {"_ _ _ _ _", '0'},
-            {". _ _ _ _", '1'},
-            {". . _ _ _", '2'},
-            {". . . _ _", '3'},
-            {". . . . _", '4'},
-            {". . . . .", '5'},
-            {"_ . . . .", '6'},
-            {"_ _ . . .", '7'},
-            {"_ _ _ . .", '8'},
-            {"_ _ _ _ .", '9'},
-            {". _ . _ . _", '.'},
-            {"_ _ . . _ _", ','},
-            {". . _ _ . .", '?'},
-            {"_ . _ . _ _", '!'},
-            {"_ . . . . _", '-'},
-            {"_ . . _ .", '/'},
-            {"_ _ _ . . .", ':'},
-            {". _ _ _ _ .", '\''},
-            {"_ . _ _ . _", '}'},
-            {"_ . _ . _", ';'}, 
-            {"_ . _ _ .", '{'},
-            {"_ . . . _", '='},
-            {". _ _ . _ .", '@'},
-            {". _ . . .", '&'}
+            {"._",'A'},
+            {"_...",'B'},
+            {"_._.",'C'},
+            {"_..",'D'},
+            {".",'E'},
+            {".._.",'F'},
+            {"__.",'G'},
+            {"....",'H'},
+            {"..",'I'},
+            {".___",'J'},
+            {"_._",'K'},
+            {"._..",'L'},
+            {"__",'M'},
+            {"_.",'N'},
+            {"___",'O'},
+            {".__.",'P'},
+            {"__._",'Q'},
+            {"._.",'R'},
+            {"...",'S'},
+            {"_",'T'},
+            {".._",'U'},
+            {"..._",'V'},
+            {".__",'W'},
+            {"_.._",'X'},
+            {"_.__",'Y'},
+            {"__..",'Z'},
+            {"_____",'0'},
+            {".____",'1'},
+            {"..___",'2'},
+            {"...__",'3'},
+            {"...._",'4'},
+            {".....",'5'},
+            {"_....",'6'},
+            {"__...",'7'},
+            {"___..",'8'},
+            {"____.",'9'},
+            {"._._._",'.'},
+            {"__..__",','},
+            {"..__..",'?'},
+            {"_._.__",'!'},
+            {"_...._",'-'},
+            {"_.._.",'/'},
+            {"___...",':'},
+            {".____.",'\''},
+            {"_.__._",'}'},
+            {"_._._",';'},
+            {"_.__.",'{'},
+            {"_..._",'='},
+            {".__._.",'@'},
+            {"._...",'&'},
+            {"/", ' '}
         };
-        //Dictionary<string, Char> text = ToMorse.ToDictionary(e => e.Value, e => e.Key);
         string TextResult = string.Empty;
 
         public ConvertToText()
         {
-            InitializeComponent();
+            InitializeComponent();                  
         }
 
-        private char ConvToText(string X)
+        private char ConvToText(string Y)
         {
-            if (ToMorse.ContainsKey(X))
+            if (ToMorse.ContainsKey(Y))
             {
-                return ToMorse[X];
+                return ToMorse[Y];
             }
 
             else
@@ -96,14 +96,15 @@ namespace MorseCode
         private void ConvertText_Click(object sender, EventArgs e)
         {
             InputString = Input.Text;
-            string[] inputArray = InputString.Split(' ');
+            string[] InputArray = InputString.Split(' ');
 
-            foreach (string word in inputArray)
+            foreach (string Word in InputArray)
             {
-                TextResult += ConvToText(word);
+                TextResult += ConvToText(Word);
             }
 
             Output.Text = TextResult;
+            ConvertText.Enabled = false;
         }
 
         private void Output_TextChanged(object sender, EventArgs e)
