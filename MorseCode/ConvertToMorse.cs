@@ -67,7 +67,7 @@ namespace MorseCode
             {'@', ". _ _ . _ ."},
             {'&', ". _ . . ."}
         };
-        string MorseResult;
+        public static string MorseResult;
 
         public ConvertToMorse()
         {
@@ -79,7 +79,7 @@ namespace MorseCode
 
         }
 
-        private void ConvertText_Click(object sender, EventArgs e)
+        public void ConvertText_Click(object sender, EventArgs e)
         {
             InputString = Input.Text;
             InputString = InputString.ToUpper();
